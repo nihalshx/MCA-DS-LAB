@@ -7,11 +7,14 @@ struct Node
     struct Node *Rlink;
     struct Node *Llink;
 };
+
 struct Node *header = NULL;
 struct Node *CreateNode(int data)
+
 {
     struct Node *newnode;
-    newnode = malloc(sizeof(struct Node));
+    //newnode = malloc(sizeof(struct Node)); 
+    newnode = (struct Node*)malloc((sizeof(struct Node));
     newnode->data = data;
     newnode->Rlink = NULL;
     newnode->Llink = NULL;
@@ -21,6 +24,7 @@ struct Node *CreateNode(int data)
 void insertAtFront(int data)
 {
     struct Node *newnode;
+
     if (header == NULL)
     {
         newnode = CreateNode(data);
@@ -38,6 +42,7 @@ void insertAtEnd(int data)
 {
     struct Node *newnode = CreateNode(data);
     struct Node *ptr = header;
+
     if (header == NULL)
         header = newnode;
     else
@@ -55,6 +60,7 @@ void insertAtAny(int data, int pos)
     struct Node *newnode = CreateNode(data);
     struct Node *ptr = header, *prev;
     int currentPos = 0;
+
     if (pos == 0)
     {
         newnode->Rlink = header;
@@ -87,6 +93,7 @@ void insertAtAny(int data, int pos)
 void deleteAtFront()
 {
     struct Node *ptr = header;
+
     if (header == NULL)
         printf("Empty List");
     else
@@ -101,6 +108,7 @@ void deleteAtFront()
 void deleteAtEnd()
 {
     struct Node *prev, *ptr = header;
+
     if (header == NULL)
         printf("Empty List");
     else
@@ -118,6 +126,7 @@ void deleteAtEnd()
 void deleteAtAny(int key)
 {
     struct Node *prev, *ptr = header;
+
     if (header == NULL)
         printf("List is Empty");
     if (ptr->data == key)
@@ -140,6 +149,7 @@ void traversal()
 {
     struct Node *ptr;
     ptr = header;
+
     while (ptr != NULL)
     {
         printf("%d\t", ptr->data);
@@ -148,8 +158,24 @@ void traversal()
     printf("\n");
 }
 
-void search()
+void search(int key)
 {
+    struct Node *ptr = header;
+    int position = 0;
+
+
+    while (ptr != NULL)
+    {
+        if (ptr->data == key) 
+        {
+            printf("Element %d found at position %d\n", key, position);
+            return;
+        }
+        ptr = ptr->Rlink;
+        position++;
+    }
+
+    printf("Element %d not found in the list\n", key);
 }
 
 int main()
