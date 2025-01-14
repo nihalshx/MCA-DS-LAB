@@ -1,6 +1,7 @@
-# MCA Data Structures Lab Program Repository (C Language)
-in mes college of engineering kuttippuram
-Welcome to the MCA Data Structures Lab Program repository! This repository contains a collection of data structures programs implemented in **C language**, designed for MCA (Master of Computer Applications) coursework. These programs focus on foundational data structure concepts and provide practical examples to enhance your understanding.
+# MCA Data Structures Lab Program Repository – MES College of Engineering, Kuttippuram
+
+Welcome to the MCA Data Structures Lab Program repository! This repository contains a collection of data structures programs implemented in C language, designed for MCA (Master of Computer Applications) coursework. These programs focus on foundational data structure concepts and provide practical examples to enhance your understanding.
+
 
 ---
 
@@ -73,4 +74,5 @@ MCA-DS-LAB/
 11. **BFS Graph Traversal** 
 12. **DFS Graph Traversal**
 
-
+---
+This repository serves as a practical guide for mastering data structures in C. Feel free to explore, modify, and extend the programs to deepen your understanding of each data structure concept.
