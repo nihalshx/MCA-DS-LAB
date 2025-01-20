@@ -39,7 +39,7 @@ MCA-DS-LAB/
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/nihalshx/MCA-DSA-LAB.git
+   git clone https://github.com/nihalshx/MCA-DS-LAB.git
    ```
 
 2. Navigate to the **Programs** directory:
